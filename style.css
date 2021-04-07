@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  background: rgb(39, 39, 39);
+}
+
+body {
+  margin: auto;
+  position: relative;
+}
+
+/************* HEADER *****************/
+
+header h1 {
+  background-color: #C80000;
+  color: white;
+  font-size: 3rem;
+  padding: 25px;
+}
+
+header h1 span {
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+header h2 {
+  background-color: grey;
+  color: white;
+  font-weight: normal;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+header h2 span {
+  font-style: italic;
+  font-size: 2rem;
+}
+
+/************* MAIN *****************/
+main {
+  width: 90%;
+  margin: auto;
+  padding: 50px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 0;
+}
+
+.soldes-btn {
+  background: #C80000;
+  width: fit-content;
+  padding: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  border-radius: 0 10px 10px 0;
+  position: fixed;
+  left: 0;
+  top: 300px;
+  color: white;
+  font-weight: bold;
+}
+
+/************* CARDS *****************/
+
+main a {
+  text-decoration: none;
+  color: black;
+}
+
+.cards {
+  display: block;
+  position: relative;
+  background: white;
+  width: 80%;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: center;
+}
+
+.soldes {
+  background: grey;
+  width: fit-content;
+  padding: 34px 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+  border: 7px solid rgb(180, 180, 180);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cards:hover {
+  box-shadow: none;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgb(165, 165, 165);
+}
+
+.cads header {
+  height: 100%;
+}
+
+.cards header img {
+  width: 70%;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.cards .version {
+  color: rgb(182, 182, 182);
+  font-weight: bold;
+  border-bottom: 3px solid rgb(182, 182, 182);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.cards .title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  background: white;
+}
+
+.cards .content {
+  background: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #5c5c5c;
+}
+
+
+
+.cards footer {
+  background: #C80000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 10px;
+  transition: 0.3s;
+  border-radius: 3px;
+  margin-top: 0;
+}
+
+.cards footer .prices {
+  display: flex;
+}
+
+.cards footer .price-item {
+  margin: 0 10px;
+}
+
+.cards footer:hover {
+  background: #970000;
+}
+
+.cards footer:hover .btn {
+  color: rgb(255, 255, 141);
+  font-weight: bold;
+}
+
+.cards footer:hover .price {
+  transform: scale(1.5);
+}
+
+.cards footer:hover .btn {
+  color: rgb(255, 255, 141);
+  font-weight: bold;
+}
+
+.cards footer:hover .price {
+  transform: scale(1.2);
+}
+
+.cards .btn {
+  font-size: 1.2rem;
+  transition: 0.3s;
+  padding: 0 10px;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.cards .price {
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.cards .solded-price {
+  text-decoration: line-through;
+  font-size: 1.1rem;
+  color: rgb(184, 184, 184);
+  width: fit-content;
+  white-space: nowrap;
+}
+
+footer {
+  background: #808080;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1610px) {
+  main {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+
+  main {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  main {
+    width: 85%;
+    padding: 50px 10px;
+    display: grid;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .cards:hover {
+    box-shadow: none;
+    transform: scale(1);
+    box-shadow: 0 0 30px rgb(126, 126, 126);
+  }
+}
